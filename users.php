@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (int) ($_POST['id'] ?? 0);
     $action = $_POST['action'] ?? '';
 
-    // Approve a pending user account
     if ($action === 'approve') {
 
         $stmt = $pdo->prepare("
